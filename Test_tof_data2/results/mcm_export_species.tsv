@@ -1,0 +1,93 @@
+*       Citation
+*       
+*       A citation to
+*  the MCM website and the relevant mechanism construction
+*  protocols should be given in any publication using
+*  information obtained from this source, using the following
+*  or comparable wording:
+*       
+* The chemical mechanistic
+*  information was taken from the Master Chemical Mechanism,
+*  MCM v3.3.1 (reference), via  website:
+*  http://mcm.york.ac.uk/
+* 
+* The reference should be: 
+* 
+* 
+*  For non-aromatic schemes:
+*    
+*       Jenkin et al.,
+*  Atmos. Environ., 31, 81, 1997
+*  [doi:10.1016/S1352-2310(96)00105-7]
+*       Saunders et
+*  al., Atmos. Chem. Phys., 3, 161, 2003
+*  [doi:10.5194/acp-3-161-2003]
+*    
+*    For aromatic
+*  schemes:
+*    
+*       Jenkin et al., Atmos. Chem. Phys.,
+*  3, 181, 2003 [doi:10.5194/acp-3-181-2003]
+*       Bloss et
+*  al., Atmos. Chem. Phys., 5, 641, 2005
+*  [doi:10.5194/acp-5-641-2005]
+*    
+*    For the
+*  β-caryophyllene scheme:
+*    
+*       Jenkin et al.,
+*  Atmos. Chem. Phys.,  12, 5275, 2012
+*  [doi:10.5194/acp-12-5275-2012]
+*    
+*    For the isoprene
+*  scheme:
+*    
+*       Jenkin et al., Atmos. Chem. Phys.,
+*  15, 11433-11459, 2015 [doi:10.5194/acp-15-11433-2015]
+* Selected VOCs: DMS
+Name	Smiles	Inchi	InchiKey	Formula	Mass	Excited	PeroxyRadical	Synonyms
+CH3NO3	CON(=O)=O	InChI=1S/CH3NO3/c1-5-2(3)4/h1H3	LRMHVVPPGGOAJQ-UHFFFAOYSA-N	CH3NO3	77.0394	false	false	METHYL NITRATE; 598-58-3; Nitric acid, methyl ester; nitric acid methyl ester; BRN 1699872
+CH3O	C[O]	InChI=1S/CH3O/c1-2/h1H3	GRVDJDISBSALJP-UHFFFAOYSA-N	CH3O	31.0339	false	false	2143-68-2; Methoxy; Methoxy radical; Methoxyl; Methyloxy
+CH3O2	CO[O]	InChI=1S/CH3O2/c1-3-2/h1H3	WTFNSXYULBQCQV-UHFFFAOYSA-N	CH3O2	47.0333	false	true	Methyldioxy radical; 2143-58-0; Methyldioxy; (Methylperoxy) radical; DTXSID10944007
+CH3O2NO2	COON(=O)=O	InChI=1S/CH3NO4/c1-5-6-2(3)4/h1H3	LCFGXMPUQSXLCQ-UHFFFAOYSA-N	CH3NO4	93.0388	false	false	(nitroperoxy)methane; 42829-59-4; CH3OONO2; DTXSID30962723; Peroxynitric acid, methyl ester
+CH3OH	CO	InChI=1S/CH4O/c1-2/h2H,1H3	OKKJLVBELUTLKV-UHFFFAOYSA-N	CH4O	32.0419	false	false	67-56-1; methanol; methanol-; MOH; methyl alcohol
+CH3OOH	COO	InChI=1S/CH4O2/c1-3-2/h2H,1H3	MEUKEBNAABNAEX-UHFFFAOYSA-N	CH4O2	48.0413	false	false	Methyl hydroperoxide; 3031-73-0; hydroperoxymethane; CCRIS 4486; DTXSID10184401
+CH3S	C[S]	InChI=1S/CH3S/c1-2/h1H3	QSLPNSWXUQHVLP-UHFFFAOYSA-N	CH3S	47.0995	false	false	(Methylthio)radical; Methylthio radical; 7175-75-9; DTXSID60992376; Methylthio
+CH3SCH2O	CSC[O]	InChI=1S/C2H5OS/c1-4-2-3/h2H2,1H3	IYYQFVJKDZNQDZ-UHFFFAOYSA-N	C2H5OS	77.1255	false	false	
+CH3SCH2O2	CSCO[O]	InChI=1S/C2H5O2S/c1-5-2-4-3/h2H2,1H3	PWQOUNNOWRJXEF-UHFFFAOYSA-N	C2H5O2S	93.1249	false	true	(Methylthiomethylperoxy)radical
+CH3SCH2OH	CSCO	InChI=1S/C2H6OS/c1-4-2-3/h3H,2H2,1H3	ZSSFPSNLAUYOFG-UHFFFAOYSA-N	C2H6OS	78.1334	false	false	2,6-Hydroxydimethyl- SUlfide
+CH3SCH2OOH	CSCOO	InChI=1S/C2H6O2S/c1-5-2-4-3/h3H,2H2,1H3	LDZPECMXMDESRV-UHFFFAOYSA-N	C2H6O2S	94.1328	false	false	
+CH3SCHO	CSC=O	InChI=1S/C2H4OS/c1-4-2-3/h2H,1H3	LFJRGYNYRORDDM-UHFFFAOYSA-N	C2H4OS	76.1176	false	false	S-methyl thioformate; 27798-35-2; methanethioic acid, S-methyl ester; DTXSID50348545
+CH3SO	CS[O]	InChI=1S/CH3OS/c1-3-2/h1H3	BSASGANESDGUBT-UHFFFAOYSA-N	CH3OS	63.0989	false	false	Methylsulfinylium; [(Methylthio)oxy]radical
+CH3SO2	C[S](=O)=O	InChI=1S/CH3O2S/c1-4(2)3/h1H3	InChIKey=JTRIUPVSQUCCHH-UHFFFAOYSA-N	CH3O2S	79.0983	false	false	
+CH3SO2CHO	O=CS(=O)(=O)C	InChI=1S/C2H4O3S/c1-6(4,5)2-3/h2H,1H3	LUGQISNSRPQOGS-UHFFFAOYSA-N	C2H4O3S	108.1164	false	false	SCHEMBL1266814
+CH3SO2O2	[O]OS(=O)(=O)C	InChI=1S/CH3O4S/c1-6(3,4)5-2/h1H3	STWVNQSXOIQJHM-UHFFFAOYSA-N	CH3O4S	111.0971	false	true	
+CH3SO2OOH	OOS(=O)(=O)C	InChI=1S/CH4O4S/c1-6(3,4)5-2/h2H,1H3	BENVNICSYZXTGE-UHFFFAOYSA-N	CH4O4S	112.1051	false	false	SCHEMBL412131
+CH3SO3	CS(=O)(=O)[O]	InChI=1S/CH3O3S/c1-5(2,3)4/h1H3	AGEBJYJJWHBPJT-UHFFFAOYSA-N	CH3O3S	95.0977	false	false	(Methylsulfonyloxy)radical; mesyloxy
+CH3SO4NO2	[O-][N+](=O)OOS(=O)(=O)C	InChI=1S/CH3NO6S/c1-9(5,6)8-7-2(3)4/h1H3	IMLJWBRSRKRPAQ-UHFFFAOYSA-N	CH3NO6S	157.1026	false	false	157671-68-6; DTXSID00778732; [(Nitroperoxy)sulfonyl]methane; methylsulfonyl peroxynitrate
+CH3SOO	CSO[O]	InChI=1S/CH3O2S/c1-4-3-2/h1H3	YDOBSMJUQGQZCN-UHFFFAOYSA-N	CH3O2S	79.0983	false	true	(Methylthioperoxy)radical
+CH3SOO2	CS(=O)O[O]	InChI=1S/CH3O3S/c1-5(3)4-2/h1H3	ZKHLHDJTTHVJBR-UHFFFAOYSA-N	CH3O3S	95.0977	false	true	(Methylsulfinylperoxy)radical
+CH3SOO2NO2	[O-][N+](=O)OOS(=O)C	InChI=1S/CH3NO5S/c1-8(5)7-6-2(3)4/h1H3	PGTDFOBGUOOGGZ-UHFFFAOYSA-N	CH3NO5S	141.1032	false	false	
+CH3SOOOH	CS(=O)OO	InChI=1S/CH4O3S/c1-5(3)4-2/h2H,1H3	IZTYBZWDPIUSAG-UHFFFAOYSA-N	CH4O3S	96.1057	false	false	hy-droxymethanesulfinate
+CO	[C-]#[O+]	InChI=1S/CO/c1-2	UGFAIRIUMAVXCW-UHFFFAOYSA-N	CO	28.01		false	
+DMS	CSC	InChI=1S/C2H6S/c1-3-2/h1-2H3	QMMFVYPAHWMCMS-UHFFFAOYSA-N	C2H6S	62.134	false	false	75-18-3; dimethyl sulfide; Methyl sulfide; dimethylsulfide; Methane, thiobis-
+DMSO	CS(=O)C	InChI=1S/C2H6OS/c1-4(2)3/h1-2H3	IAZDPXIOMUYVGZ-UHFFFAOYSA-N	C2H6OS	78.1334	false	false	dimethyl sulfoxide; dimethyl-sulfoxide; (DMSO); 67-68-5; Dimethylsulfoxide
+DMSO2	CS(=O)(=O)C	InChI=1S/C2H6O2S/c1-5(2,3)4/h1-2H3	HHVIBTZHLRERCL-UHFFFAOYSA-N	C2H6O2S	94.1328	false	false	67-71-0; Dimethyl sulfone; Methyl sulfone; Methylsulfonylmethane; DIMETHYLSULFONE
+DMSO2O	[O]CS(=O)(=O)C	InChI=1S/C2H5O3S/c1-6(4,5)2-3/h2H2,1H3	GHPHRDPWEHIPHX-UHFFFAOYSA-N	C2H5O3S	109.1243	false	false	
+DMSO2O2	[O]OCS(=O)(=O)C	InChI=1S/C2H5O4S/c1-7(4,5)2-6-3/h2H2,1H3	MIDORDSQRQCNMR-UHFFFAOYSA-N	C2H5O4S	125.1237	false	true	
+DMSO2OH	OCS(=O)(=O)C	InChI=1S/C2H6O3S/c1-6(4,5)2-3/h3H,2H2,1H3	ICHBUPLXTAHKLA-UHFFFAOYSA-N	C2H6O3S	110.1322	false	false	SCHEMBL554708
+DMSO2OOH	OOCS(=O)(=O)C	InChI=1S/C2H6O4S/c1-7(4,5)2-6-3/h3H,2H2,1H3	GCLQZLAJAMWHPS-UHFFFAOYSA-N	C2H6O4S	126.1316	false	false	
+H2	[HH]	InChI=1S/H2/h1H	UFHFLCQGNIYNRP-UHFFFAOYSA-N	H2	2.016		false	
+HCHO	C=O	InChI=1S/CH2O/c1-2/h1H2	WSFSSNUMVMOOMR-UHFFFAOYSA-N	CH2O	30.026	false	false	50-00-0; formaldehyde; CARBON-MONOXIDE; 30525-89-4; methanal
+HNO3	[N+](=O)(O)[O-]	InChI=1S/HNO3/c2-1(3)4/h(H,2,3,4)	GRYLNZFGIOXLOG-UHFFFAOYSA-N	HNO3	63.013		false	
+HO2	O[O]	InChI=1S/HO2/c1-2/h1H	OUUQCZGPVNCOIJ-UHFFFAOYSA-N	HO2	33.007		false	
+HODMSO2	[O]OS(C)(C)O	InChI=1S/C2H7O3S/c1-6(2,4)5-3/h4H,1-2H3	KRMXXULUIBWANK-UHFFFAOYSA-N	C2H7O3S	111.1402	false	true	
+MSA	CS(=O)(=O)O	InChI=1S/CH4O3S/c1-5(2,3)4/h1H3,(H,2,3,4)	AFVFQIVMOAPDHO-UHFFFAOYSA-N	CH4O3S	96.1057	false	false	75-75-2; METHANESULFONIC ACID; Methylsulfonic acid; 03S; Methanesulphonic acid
+MSIA	CS(=O)O	InChI=1S/CH4O2S/c1-4(2)3/h1H3,(H,2,3)	XNEFVTBPCXGIRX-UHFFFAOYSA-N	CH4O2S	80.1063	false	false	Methanesulfinic acid; 17696-73-0; Methanesulfinic acid (6CI,8CI,9CI); Methanesulfinic acid(6CI,8CI,9CI); AKOS030229087
+NO	[N]=O	InChI=1S/NO/c1-2	MWUXSHHQAYIFBG-UHFFFAOYSA-N	NO	30.006		false	
+NO2	N(=O)[O]	InChI=1S/NO2/c2-1-3	JCXJVPUVTGWSNB-UHFFFAOYSA-N	NO2	46.006		false	
+NO3	[N+](=O)([O-])[O]	InChI=1S/NO3/c2-1(3)4	YPJKMVATUPSWOH-UHFFFAOYSA-N	NO3	62.005		false	
+O3	[O-][O+]=O	InChI=1S/O3/c1-3-2	CBENFWSGALASAD-UHFFFAOYSA-N	O3	47.998		false	
+OH	[OH]	InChI=1S/HO/h1H	TUJKJAMUKRIRHC-UHFFFAOYSA-N	HO	17.007		false	
+SO2	O=S=O	InChI=1S/O2S/c1-3-2	RAHZWNYVWXNFOC-UHFFFAOYSA-N	O2S	64.07		false	
+SO3	O=S(=O)=O	InChI=1S/O3S/c1-4(2)3	AKEJUJNQAAGONA-UHFFFAOYSA-N	O3S	80.07		false	
