@@ -1,33 +1,49 @@
-Section,Item,Description
-Project Info,Name,Masslist_final
-Project Info,Version,2.2 (DMS Optimized)
-Project Info,Last Updated,2023-10 (Added Config Struct)
-Project Info,Purpose,"High-Resolution Mass Spectrometry analysis tool. Optimized for Atmospheric Chemistry (DMS oxidation products)."
-,,
-,,
-Installation,Julia Version,>= 1.6
-Installation,Required Packages,"GLMakie, NativeFileDialog, DataFrames, CSV, HDF5, Statistics, LsqFit, Combinatorics, Interpolations, Printf, LinearAlgebra"
-Installation,One-Line Setup,"Run in Julia REPL: import Pkg; Pkg.add([""GLMakie"", ""NativeFileDialog"", ""DataFrames"", ""CSV"", ""HDF5"", ""LsqFit"", ""Combinatorics"", ""Interpolations""])"
-,,
-,,
-User Configuration,Where to Edit,"Look at the top of the script inside 'module ChemUtils'. Find the 'FormulaConfig' struct."
-User Configuration,Parameter: max_N,"Default = 2. Limits Nitrogen count. Set to 2 is sufficient for most atmospheric nitrates and reduces noise."
-User Configuration,Parameter: max_DBE,"Default = 10.0. Double Bond Equivalent limit. 10 is strict but covers VOCs and light PAHs. Increase to 20-30 if studying heavy soot/dimers."
-User Configuration,Parameter: inorg_must_have_S,"Default = true. CRITICAL for DMS study. If true, inorganic formulas (C=0) MUST contain Sulfur. Filters out HNO3/N2O5."
-User Configuration,Parameter: org_max_NC,"Default = 1.0. Keeps compatibility for small C1 nitrates (e.g. Methyl Nitrate)."
-,,
-,,
-Usage Guide,Step 1: Run,Execute 'include(""Masslist_final.jl"")' in VS Code or Julia REPL to launch the GUI.
-Usage Guide,Step 2: Load Spectrum,Click '1. Load HDF5' to import your spectral data (.h5).
-Usage Guide,Step 3: Load List (Important),Click '2. Load MassList'. Supports Tofware format (#Masses: header). This ensures accurate isotope fitting for known species.
-Usage Guide,Step 4: Fit Peaks,Click 'A. Fit Peaks'. The algorithm fits 'Known' peaks first (with isotope constraints), then greedily fits 'Unknown' peaks.
-Usage Guide,Step 5: Assign Formulas,Click 'B. Assign Formulas'. Generates a database based on your Configuration and matches unknown peaks.
-Usage Guide,Step 6: Export,Click 'Export Masslist'. Saves a Tofware-compatible CSV with detailed element columns (C, H, N, O, S...).
-,,
-,,
-Algorithm Logic,1. Organic Rules (C>=1),"Strict Ratio Checks: 0.3 <= H/C <= 2.5; 0 <= O/C <= 3.0. DBE limited by 'max_DBE'."
-Algorithm Logic,2. Inorganic Rules (C=0),"Safety Checks: H <= 12. Must contain S (if 'inorg_must_have_S' is true)."
-Algorithm Logic,3. Dual-Track Matching,"Track 1: Matches Background Ions (NH4+, H3O+). Track 2: Matches Neutral Mass + Adduct ([M+H]+ or [M+NH4]+)."
-Algorithm Logic,4. Cleaning,"Post-processing merges split peaks within 0.02 Da to reduce artifacts."
+# Masslist Creator
 
-NOte that there is a bug in the processing project script, to fix it, there is a script in GUI_MainTest.jl.
+**Masslist Creator** is a Julia-based toolkit designed for the automated generation, calibration, and management of mass lists for Time-of-Flight Mass Spectrometry (ToF-MS) data.
+
+It streamlines the workflow of processing raw ToF data (`.h5`), identifying peaks, and matching them with chemical formulas (including MCM species), making it an essential tool for atmospheric science and chemical analysis.
+
+## 📂 Project Structure
+
+The repository is organized as follows:
+
+- **`src/`**: Contains the core source code.
+  - `Masslist_Creator.jl`: Main module entry point.
+  - `Masslist_final.jl`: Finalized logic for mass list generation.
+- **`Test_Tof_data/`**: Contains raw TOF-MS data files (`.h5`) used for testing and validation.
+- **`Test_masslist/`**: Includes reference mass lists and compound databases (e.g., MCM species).
+- **`Literatures/`**: Related academic references and supplementary materials.
+- **`test/`**: Unit tests and debugging scripts (Contains the fix for the current bug).
+
+## ⚠️ Known Issues & Fixes
+
+> **Important Note:** There is a known bug in the current processingProject.jl in Toftracer2.
+>
+> **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing.
+
+## 🚀 Features
+
+- **Automated Peak Finding**: Algorithms tailored for TOF data to identify peaks from HDF5 raw files.
+- **Mass List Generation**: Create calibrated mass lists (`.csv`) ready for analysis software (e.g., Tofware).
+- **MCM Integration**: Built-in support for mapping Master Chemical Mechanism (MCM) compounds.
+- **Batch Processing**: Capable of handling multiple datasets and time-series data.
+
+## 🛠️ Installation & Usage
+
+### Prerequisites
+- **Julia 1.6+** (Recommended)
+- HDF5 support (via `HDF5.jl`)
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/sensensensensen/Masslist_Creator.git](https://github.com/sensensensensen/Masslist_Creator.git)
+   cd Masslist_Creator
+
+using Pkg
+Pkg.activate(".")
+Pkg.instantiate()
+
+include("test/GUI_MainTest.jl")
