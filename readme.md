@@ -22,6 +22,8 @@ The repository is organized as follows:
 >
 > **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing.
 
+> To change the threshold value, press enter when you've finished.
+
 ## 🚀 Features
 
 - **Automated Peak Finding**: Algorithms tailored for TOF data to identify peaks from HDF5 raw files.
