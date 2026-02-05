@@ -32,7 +32,7 @@ The repository is organized as follows:
 ## 🛠️ Installation & Usage
 
 ### Prerequisites
-- **Julia 1.6+** (Recommended)
+- **Julia 1.11.3
 - HDF5 support (via `HDF5.jl`)
 
 ### Setup
