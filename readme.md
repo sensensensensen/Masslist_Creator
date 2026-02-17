@@ -9,7 +9,7 @@
 
 **MassList Creator** is a Julia-based GUI application designed to automate the generation of mass lists for Time-of-Flight Chemical Ionization Mass Spectrometry (ToF-CIMS).
 
-It processes HDF5 spectral data, performs peak fitting, generates chemical formula candidates based on configurable constraints, and assigns formulas using isotopic pattern matching. The output is optimized for creating calibration files compatible with **Tofware** and **Toftracer2**.
+It processes HDF5 spectral data, performs peak fitting, generates chemical formula candidates based on configurable constraints, and assigns formulas using isotopic pattern matching. The output is optimized for creating calibration files compatible with **Toftracer2** or other Tof-processing tools.
 
 ## ✨ Key Features
 
