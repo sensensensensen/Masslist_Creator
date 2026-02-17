@@ -68,9 +68,10 @@ If you have just finished the installation steps above and are still in the Juli
 julia
 # 1. Ensure the environment is active
 using Pkg; Pkg.activate(".")
-```
+
 # 2. Run the application
 include("Masslist_final.jl")
+```
 
 ### Method 2: Running from Command Line (One-Liner)
 You can run the script directly from your terminal using the `--project` flag:
@@ -101,7 +102,7 @@ julia --project=. Masslist_final.jl
 
 To customize the chemical formula generation rules (e.g., to allow for larger molecules or different element ratios), you must edit the FormulaConfig struct directly in Masslist_final.jl.
 
-Locate the FormulaConfig struct (approx. line 15):
+Locate the FormulaConfig struct (approx. line 60):
 ```
 Julia
 
