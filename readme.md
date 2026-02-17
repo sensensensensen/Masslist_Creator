@@ -27,7 +27,7 @@ It processes HDF5 spectral data, performs peak fitting, generates chemical formu
     * *Verified on Windows 11 (x86_64) / Intel i9-14900HX*.
 * **Julia Version**: **v1.10** or higher.
     * *Developed and tested on **v1.11.3***.
-* **Hardware**: Discrete GPU recommended for smoothest plotting performance with `GLMakie`.
+* **Hardware**: Discrete GPU recommended for smooth plotting performance with `GLMakie`.
 
 ---
 
