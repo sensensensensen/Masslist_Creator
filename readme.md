@@ -77,7 +77,7 @@ You can run the script directly from your terminal using the `--project` flag:
 ```bash
 julia --project=. Masslist_final.jl
 
-⚙️ Workflow
+## ⚙️ Workflow
 
     Load Data:
         Click Load HDF5. Select your .h5 file.
@@ -95,7 +95,7 @@ julia --project=. Masslist_final.jl
     Export:
         Click Export Masslist to save the results as a .csv file formatted for Tofware import.
 
-🧪 Advanced Configuration
+## 🧪 Advanced Configuration
 
 To customize the chemical formula generation rules (e.g., to allow for larger molecules or different element ratios), you must edit the FormulaConfig struct directly in Masslist_final.jl.
 
@@ -118,58 +118,13 @@ Base.@kwdef struct FormulaConfig
 end
 
 Modify these values and restart the application to apply changes.
-❓ Troubleshooting
+## ❓ Troubleshooting
 
     Slow Startup: If the window takes a long time to appear or shows "Not Responding" initially, ensure you have run the precompile command in the installation steps.
 
     OpenGL/Plotting Errors: If the plot area is blank or crashes, it may be an issue with GPU drivers (common on some Windows laptops). Ensure your graphics drivers are up to date.
 
     "Package not found": Make sure you activated the environment using activate . (in Pkg mode) or --project=. (command line).
-
-📄 Reference
-
-Based on the methodology described in:
-Mickwitz et al. (2025), Atmospheric Measurement Techniques (AMT).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Masslist Creator
-
-**Masslist Creator** is a Julia-based toolkit designed for the automated generation, calibration, and management of mass lists for Time-of-Flight Mass Spectrometry (ToF-MS) data (especially for TOftracer2) based on Mickwitz et al., 2025 AMT.
-
-It streamlines the workflow of processing raw ToF data (`.h5`), identifying peaks, and matching them with chemical formulas (including MCM species), making it an essential tool for atmospheric science and chemical analysis.
-
-## 📂 Project Structure
-
-The repository is organized as follows:
-
-- **`src/`**: Contains the core source code.
-  - `Masslist_Creator.jl`: Main module entry point.
-  - `Masslist_final.jl`: Finalized logic for mass list generation.
-- **`Test_Tof_data/`**: Contains raw TOF-MS data files (`.h5`) used for testing and validation.
-- **`Test_masslist/`**: Includes reference mass lists and compound databases (e.g., MCM species).
-- **`Literatures/`**: Related academic references and supplementary materials.
-- **`test/`**: Unit tests and debugging scripts (Contains the fix for the current bug).
 
 ## ⚠️ Known Issues & Fixes
 
@@ -179,28 +134,7 @@ The repository is organized as follows:
 
 > To change the threshold value, press enter when you've finished.
 
-## 🚀 Features
+## 📄 Reference
 
-- **Automated Peak Finding**: Algorithms tailored for TOF data to identify peaks from HDF5 raw files.
-- **Mass List Generation**: Create calibrated mass lists (`.csv`) ready for analysis software (e.g., Tofware).
-- **MCM Integration**: Built-in support for mapping Master Chemical Mechanism (MCM) compounds.
-- **Batch Processing**: Capable of handling multiple datasets and time-series data.
-
-## 🛠️ Installation & Usage
-
-### Prerequisites
-- **Julia 1.11.3
-- HDF5 support (via `HDF5.jl`)
-
-### Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/sensensensensen/Masslist_Creator.git](https://github.com/sensensensensen/Masslist_Creator.git)
-   cd Masslist_Creator
-
-using Pkg
-Pkg.activate(".")
-Pkg.instantiate()
-
-include("test/GUI_MainTest.jl")
+Based on the methodology described in:
+Mickwitz et al. (2025), Atmospheric Measurement Techniques (AMT).
