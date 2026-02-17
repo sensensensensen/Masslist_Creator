@@ -102,6 +102,7 @@ julia --project=. Masslist_final.jl
 To customize the chemical formula generation rules (e.g., to allow for larger molecules or different element ratios), you must edit the FormulaConfig struct directly in Masslist_final.jl.
 
 Locate the FormulaConfig struct (approx. line 15):
+```
 Julia
 
 Base.@kwdef struct FormulaConfig
@@ -118,7 +119,7 @@ Base.@kwdef struct FormulaConfig
     org_min_HC::Float64 = 0.3    # Min H/C ratio
     filter_radicals::Bool = false # Set true to enforce integer DBE
 end
-
+```
 Modify these values and restart the application to apply changes.
 ## ❓ Troubleshooting
 
