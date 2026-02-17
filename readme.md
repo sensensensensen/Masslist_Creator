@@ -1,6 +1,6 @@
 # Masslist Creator
 
-**Masslist Creator** is a Julia-based toolkit designed for the automated generation, calibration, and management of mass lists for Time-of-Flight Mass Spectrometry (ToF-MS) data.
+**Masslist Creator** is a Julia-based toolkit designed for the automated generation, calibration, and management of mass lists for Time-of-Flight Mass Spectrometry (ToF-MS) data (especially for TOftracer2) based on Mickwitz et al., 2025 AMT.
 
 It streamlines the workflow of processing raw ToF data (`.h5`), identifying peaks, and matching them with chemical formulas (including MCM species), making it an essential tool for atmospheric science and chemical analysis.
 
