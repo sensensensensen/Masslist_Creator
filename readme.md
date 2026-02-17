@@ -132,13 +132,13 @@ Modify these values and restart the application to apply changes.
 
 ## ⚠️ Known Issues & Fixes
 
-> **Important Note:** There is a known bug in the current processingProject.jl in Toftracer2.
+> **Important Note 1:** There is a known bug in the current processingProject.jl in Toftracer2.
 >
 > **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing.
 
-> To change the threshold value, press enter when you've finished.
+> **Important Note 2:** To change the threshold value, press enter when you've finished.
 
 ## 📄 Reference
 
-Based on the methodology described in:
+The methodology described in:
 Mickwitz et al. (2025), Atmospheric Measurement Techniques (AMT).
