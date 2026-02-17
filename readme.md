@@ -41,7 +41,7 @@ Download and install Julia v1.11+ from the official website: [https://julialang.
 ### 2. Set Up the Environment
 1.  Open a terminal (Command Prompt or PowerShell) and navigate to the folder containing `Masslist_final.jl`.
 2.  Start Julia:
-    ```bash
+    ```
     julia
     ```
 3.  Enter **Package Mode** by pressing `]` (the closing bracket key). The prompt will change to `(@v1.11) pkg>`.
@@ -64,7 +64,8 @@ Download and install Julia v1.11+ from the official website: [https://julialang.
 ### Method 1: Running from the REPL (Recommended for Devs)
 If you have just finished the installation steps above and are still in the Julia REPL:
 
-```julia
+```
+julia
 # 1. Ensure the environment is active
 using Pkg; Pkg.activate(".")
 ```
@@ -74,8 +75,9 @@ include("Masslist_final.jl")
 ### Method 2: Running from Command Line (One-Liner)
 You can run the script directly from your terminal using the `--project` flag:
 
-```bash
+```
 julia --project=. Masslist_final.jl
+```
 
 ## ⚙️ Workflow
 
