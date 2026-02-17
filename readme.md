@@ -67,7 +67,7 @@ If you have just finished the installation steps above and are still in the Juli
 ```julia
 # 1. Ensure the environment is active
 using Pkg; Pkg.activate(".")
-
+```
 # 2. Run the application
 include("Masslist_final.jl")
 
