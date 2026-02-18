@@ -99,20 +99,32 @@ Locate the FormulaConfig struct (approx. line 60):
 ```
 Julia
 
-Base.@kwdef struct FormulaConfig
-    # --- Atomic Count Limits ---
-    max_C::Int = 40      # Max Carbons
-    max_H::Int = 80      # Max Hydrogens
-    max_N::Int = 2       # Max Nitrogens (Keep low to reduce noise)
-    max_O::Int = 30      # Max Oxygens
-    max_S::Int = 2       # Max Sulfur
-    max_Si::Int = 2      # Max Silicon
+ Base.@kwdef struct FormulaConfig
+     # --- 1. Atomic Count Limits (Max number of atoms) ---
+     max_C::Int = 40
+     max_H::Int = 80
+     max_N::Int = 2      # Limit to 3 to reduce noise (sufficient for atmospheric nitrates)
+     max_O::Int = 30
+     max_S::Int = 2
+     max_Si::Int = 2
 
-    # --- Ratios & Filters ---
-    max_DBE::Float64 = 10.0      # Double Bond Equivalent limit
-    org_min_HC::Float64 = 0.3    # Min H/C ratio
-    filter_radicals::Bool = false # Set true to enforce integer DBE
-end
+     # --- 2. Organic Rules (Applies when C >= 1) ---
+     # H/C Ratio Limits
+     org_min_HC::Float64 = 0.3   # Min H/C ratio (Low value covers PAHs like Coronene)
+     org_max_HC::Float64 = 2.5   # Max H/C ratio (High value covers saturated chains)
+     
+     # Other Ratio Limits
+     org_max_OC::Float64 = 3.0   # Max O/C ratio (Allows highly oxidized molecules)
+     org_max_NC::Float64 = 1.0   # Max N/C ratio (Kept at 1.0 to allow C1 nitrates)
+
+     # --- 3. Advanced Filtering (Valence & DBE) ---
+     max_DBE::Float64 = 10.0     # Max Double Bond Equivalent (Strict limit as requested)
+     filter_radicals::Bool = false # If true, enforces integer DBE (removes radicals)
+
+     # --- 4. Inorganic Rules (Applies when C = 0) ---
+     inorg_max_H::Int = 12       # Safety cap for H count in inorganic clusters
+     inorg_must_have_S::Bool = true # If true, Inorganic formulas MUST contain Sulfur (Filters HNO3)
+ end
 ```
 Modify these values and restart the application to apply changes.
 ## ❓ Troubleshooting
