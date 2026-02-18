@@ -61,7 +61,7 @@ Download and install Julia v1.11+ from the official website: [https://julialang.
 
 ## 🚀 Usage
 
-### Method 1: Running from the REPL (Recommended for Devs)
+### Method: Running from the REPL (Recommended for Devs)
 If you have just finished the installation steps above and are still in the Julia REPL:
 
 ```
@@ -71,13 +71,6 @@ using Pkg; Pkg.activate(".")
 
 # 2. Run the application
 include("Masslist_final.jl")
-```
-
-### Method 2: Running from Command Line (One-Liner)
-You can run the script directly from your terminal using the `--project` flag:
-
-```
-julia --project=. Masslist_final.jl
 ```
 
 ## ⚙️ Workflow
@@ -128,15 +121,17 @@ Modify these values and restart the application to apply changes.
 
     OpenGL/Plotting Errors: If the plot area is blank or crashes, it may be an issue with GPU drivers (common on some Windows laptops). Ensure your graphics drivers are up to date.
 
-    "Package not found": Make sure you activated the environment using activate . (in Pkg mode) or --project=. (command line).
+    "Package not found": Make sure you activated the environment using activate . (in Pkg mode).
 
 ## ⚠️ Known Issues & Fixes
 
 > **Important Note 1:** There is a known bug in the current processingProject.jl in Toftracer2.
 >
-> **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing.
+> **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing, but it is needed to change the pathway of the masslist files.
 
 > **Important Note 2:** To change the threshold value, press enter when you've finished.
+
+> **Important Note 3:** To change the threshold value, press enter when you've finished.
 
 ## 📄 Reference
 
