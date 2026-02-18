@@ -1,5 +1,3 @@
-module Masslist_final
-
 """
 # Overview
 This module contains the core logic for generating chemical formula candidates, calculating isotopic patterns, fitting peaks,
@@ -13,6 +11,7 @@ This module contains the core logic for generating chemical formula candidates, 
 FormulaConfig struct in module ChemUtils allows users to easily adjust the formula generation rules without modifying the core logic.
     including atomic count limits, ratio constraints, and advanced filtering options like DBE and radical filtering.
 """
+module Masslist_final
 
 using GLMakie
 using NativeFileDialog
