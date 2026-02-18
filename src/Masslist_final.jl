@@ -31,7 +31,6 @@ export main
 # ==============================================================================
 # 1. Chemistry & Physics Module
 # ==============================================================================
-module ChemUtils
 """
 This submodule contains functions and data structures related to chemical formula generation, isotopic pattern calculation, and adduct handling.
 # Arguments
@@ -45,6 +44,7 @@ This submodule contains functions and data structures related to chemical formul
 - `generate_formula_db(min_m, max_m; cfg::FormulaConfig)`: Generates a database of chemical formula candidates within a specified mass range, applying user-defined filtering rules.
 - `calculate_isotopes(formula_comp::Dict{String, Int})`: Calculates the isotopic pattern for a given chemical formula composition, returning a vector of mass shifts and relative abundances.
 """
+module ChemUtils
     using Combinatorics
     # Atomic Masses (Monoisotopic)
     const ATOMIC_MASS = Dict(
