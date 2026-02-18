@@ -138,8 +138,7 @@ Modify these values and restart the application to apply changes.
 ## ⚠️ Known Issues & Fixes
 
 > **Important Note 1:** There is a potential bug in the current processingProject.jl in Toftracer2 or Peakfitter (https://github.com/weikou/TOF-Tracer2/tree/dev; https://github.com/lstark-uibk/Manual_Pyeakfitter).
->
-> **Solution:** To run the program correctly, please use the test script located in **`test/GUI_MainTest.jl`**. This file contains the necessary patch to ensure correct processing, but it is needed to change the pathway of the masslist files.
+
 
 > **Important Note 2:** To change the threshold value, press enter when you've finished.
 
