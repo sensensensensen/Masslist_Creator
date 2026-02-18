@@ -131,7 +131,7 @@ Modify these values and restart the application to apply changes.
 
 > **Important Note 2:** To change the threshold value, press enter when you've finished.
 
-> **Important Note 3:** To change the threshold value, press enter when you've finished.
+> **Important Note 3:** To start and create with a new masslist, it is better to restart the app, which may be updated later with new functions.
 
 ## 📄 Reference
 
